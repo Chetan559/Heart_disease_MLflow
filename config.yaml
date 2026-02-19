@@ -1,0 +1,55 @@
+paths:
+  train: "data/train.csv"
+  test: "data/test.csv"
+  models_dir: "models/"
+
+target: "Heart Disease"
+random_state: 42
+n_splits: 10
+
+xgb:
+  n_estimators: 2000
+  learning_rate: 0.02991957949910793
+  max_depth: 3
+  subsample: 0.820977051070539
+  colsample_bytree: 0.8249105082984818
+  reg_lambda: 1.4657671110020007
+  reg_alpha: 5.31487541857897
+  min_child_weight: 8.852531449685662
+  gamma: 0.4162279086098966
+  tree_method: "hist"
+  device: "cuda" # change to "cuda" if GPU available
+  eval_metric: "auc"
+  early_stopping_rounds: 100
+
+lgb:
+  n_estimators: 1500
+  learning_rate: 0.03835277907158992
+  max_depth: -1
+  num_leaves: 16
+  min_child_samples: 64
+  subsample: 0.7053029681144002
+  colsample_bytree: 0.6585537083850933
+  reg_lambda: 3.989884511111578
+  reg_alpha: 3.8514759713725737
+  device: "cpu"
+
+cat:
+  iterations: 3091
+  learning_rate: 0.04963674908044717
+  depth: 4
+  l2_leaf_reg: 4.3874876523189394
+  bagging_temperature: 0.3401704702286477
+  random_strength: 3.372651467834558
+  task_type: "GPU" # change to "GPU" if GPU available
+  verbose: 0
+
+meta:
+  C: 0.0339967531927407
+  penalty: "l2"
+  solver: "liblinear"
+  max_iter: 5000
+
+mlflow:
+  experiment_name: "heart-disease-detection"
+  tracking_uri: "mlruns"

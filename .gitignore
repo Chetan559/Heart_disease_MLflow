@@ -205,3 +205,51 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ── Data ────────────────────────────────────────────────
+data/
+*.csv
+*.json
+
+# ── Saved Models ────────────────────────────────────────
+
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# ── MLflow ──────────────────────────────────────────────
+mlruns/
+mlartifacts/
+
+# ── Jupyter Notebooks ───────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environments ────────────────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── OS ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ─────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Logs & Temp ─────────────────────────────────────────
+*.log
+tmp/
+temp/
