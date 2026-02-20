@@ -223,9 +223,6 @@ data/
 mlruns/
 mlartifacts/
 
-# ── Jupyter Notebooks ───────────────────────────────────
-.ipynb_checkpoints/
-*.ipynb
 
 # ── Python ──────────────────────────────────────────────
 __pycache__/
